@@ -1,0 +1,256 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.main__wrapper {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.603);
+}
+
+.hide {
+  display: none !important;
+}
+
+.question {
+  margin: 0 5px;
+  color: #ffffff;
+  background: #1300bf;
+  padding: 5px;
+}
+
+.question__title {
+  display: flex;
+  justify-content: space-between;
+
+  margin: 0 5px;
+
+  background-color: #399b09;
+
+  color: white;
+}
+
+.question__title-left {
+  padding: 5px;
+}
+
+.question__title-right {
+  background: #6c5cff;
+  padding: 5px 15px;
+}
+
+.answers-wrapper {
+  padding: 5px;
+}
+
+.answer-btn {
+  display: block;
+
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 5px;
+
+  border: none;
+  outline: none;
+
+  background: #00bf9a;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  font-size: 1rem;
+  text-align: left;
+  color: #ffffff;
+}
+
+.success {
+  background-color: rgb(47, 241, 21);
+}
+
+.mistake {
+  background-color: rgba(255, 68, 68, 0.918);
+}
+
+.btn-next,
+.btn-statistic,
+.btn-back {
+  height: 42px;
+  margin: 5px 5px;
+  padding: 10px 16px;
+  border-radius: 4px;
+  border: none;
+
+  background: #1740e4b2;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.12), 0px 2px 2px rgba(0, 0, 0, 0.24);
+  outline: none;
+
+  color: #ffffff;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 1.25px;
+  text-transform: uppercase;
+}
+
+.btn-next:hover,
+.btn-statistic:hover,
+.btn-back:hover {
+  opacity: 0.85;
+}
+.btn-next:active,
+.btn-statistic:active,
+.btn-back:active {
+  transform: translate(1px, 1px);
+}
+
+.btn-statistic {
+  background: #57129bb2;
+}
+
+.btn-back {
+  background: #326e00b2;
+}
+
+.statistic__wrapper {
+  background-color: rgba(212, 205, 205, 0.021);
+}
+
+.exam__wrapper {
+  position: relative;
+}
+
+.countExamTitle {
+  padding: 10px;
+  line-height: 1.5rem;
+  font-weight: bold;
+  color: #2b7e00;
+}
+
+.countExam {
+  padding: 10px;
+  line-height: 1.5rem;
+  font-weight: bold;
+  color: #002b88;
+}
+
+table thead td {
+  min-width: 94px;
+  box-sizing: border-box;
+  margin: 8px;
+  padding: 3px 6px;
+
+  border-radius: 4px;
+  border: 1px solid rgb(204 158 158 / 5%);
+  background-color: rgb(61 67 66 / 20%);
+
+  outline: none;
+
+  color: rgb(25, 13, 13);
+  font-size: 0.875rem;
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  font-weight: 900;
+  line-height: 1.75;
+  text-align: center;
+  letter-spacing: 0.02857em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+table thead td:first-child {
+  min-width: 10px;
+}
+
+table td {
+  min-width: 64px;
+  box-sizing: border-box;
+  margin: 8px;
+  padding: 3px 6px;
+
+  border-radius: 4px;
+  border: 1px solid rgb(204 158 158 / 5%);
+  background-color: rgb(61 67 66 / 5%);
+  outline: none;
+
+  font-size: 0.875rem;
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  font-weight: 500;
+  line-height: 1.75;
+  text-align: center;
+  letter-spacing: 0.02857em;
+  text-transform: uppercase;
+  color: rgb(25, 13, 13);
+  white-space: nowrap;
+}
+.popup__mistake-wrapper,
+.popup__success-wrapper {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0, 0, 0, 0.25);
+}
+.popup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  width: 70%;
+  border-radius: 4px;
+  border: none;
+
+  padding: 20px;
+
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2), 0px 3px 4px rgba(0, 0, 0, 0.12),
+    0px 2px 4px rgba(0, 0, 0, 0.14);
+
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0.25px;
+  color: rgb(255, 255, 255);
+}
+.popup__success {
+  background-color: rgba(47, 241, 21, 0.95);
+  border: 2px solid rgb(21, 150, 3);
+}
+
+.popup__mistake {
+  background-color: rgba(255, 68, 68, 0.95);
+  border: 2px solid rgba(177, 7, 7, 0.918);
+}
+
+.btn-ok {
+  display: block;
+  height: 42px;
+  margin: 20px 5px;
+  padding: 10px 16px;
+  border-radius: 4px;
+  border: none;
+
+  background: #f7df0c;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.12), 0px 2px 2px rgba(0, 0, 0, 0.24);
+  outline: none;
+
+  color: #000000;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 1.25px;
+  text-transform: uppercase;
+}
