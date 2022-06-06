@@ -4,6 +4,7 @@ const maxQ = 20;
 const countMistake = 3;
 const login = window.location.href.split('?')[1].split('=')[1];
 console.log('login:', login);
+
 const URL_API = `https://otest-app.herokuapp.com/?login=${login}`;
 
 //....
@@ -4288,11 +4289,13 @@ class Statistic {
   }
 
   async update() {
+    console.log('UPDATE   ', dataStatistic);
     fetch(URL_API, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
       },
+
       body: JSON.stringify(dataStatistic),
     });
   }
