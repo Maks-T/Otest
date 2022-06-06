@@ -4290,13 +4290,14 @@ class Statistic {
 
   async update() {
     console.log('UPDATE   ', dataStatistic);
+    const { login, questions, successExam, unsuccessExam } = dataStatistic;
     fetch(URL_API, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
       },
 
-      body: JSON.stringify(dataStatistic),
+      body: JSON.stringify({ login, questions, successExam, unsuccessExam }),
     });
   }
 
